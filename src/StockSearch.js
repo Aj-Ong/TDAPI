@@ -12,7 +12,6 @@ export function StockSearch(prop) {
         if(inputRef.current.value !== null && inputRef.current.value !== ""){
             const stock = inputRef.current.value;
             socket.emit('search', { stock: stock });
-            console.log("SEARCH SENT TO SERVER")
         }
     }
     return (

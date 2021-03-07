@@ -16,7 +16,6 @@ export function StockLoad(prop) {
   
     useEffect( () => {
         socket.on('StockCall', (data) => {
-            console.log("CALL RECIEVED FROM SERVER");
             changedatelst(data.datelst);
             changeopenlst(data.openlst);
             changecloselst(data.closelst);

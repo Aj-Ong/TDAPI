@@ -41,7 +41,7 @@ def on_disconnect():
 @socketio.on('search')
 def on_search(data):
     """Test"""
-    datelst, openlst, closelst, highlst, lowlst, volumelst, symbol = fetchlast24hours(data['stock'])
+    datelst, openlst, closelst, highlst, lowlst, volumelst, symbol = fetchlast24hours(data['stock'].upper())
     socketio.emit('StockCall', {'datelst': datelst, 'openlst':  openlst,
                   'closelst': closelst, 'highlst': highlst, 'lowlst': lowlst, 'volumelst': volumelst, 'symbol': symbol}, broadcast=True,
                   include_self=True)

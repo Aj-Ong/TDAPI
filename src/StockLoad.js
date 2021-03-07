@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import { useState, useEffect } from 'react';
-import { io } from 'socket.io-client';
 import { Stock } from './Stock.js'
 import './App.css';
 
